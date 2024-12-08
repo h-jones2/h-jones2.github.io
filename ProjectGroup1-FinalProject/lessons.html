@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lessons | CodeQuest</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Include jQuery UI JS -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Header section with consistent header and navigation -->
+    <header>
+        <div class="logo">
+            <h1>CodeQuest</h1>
+            <p>Master JavaScript with Fun Learning</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="lessons.html" class="active">Lessons</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <section class="lessons">
+            <h2>JavaScript Lessons</h2>
+            <p>Explore a variety of JavaScript lessons, from basic syntax to advanced concepts. Choose a lesson to start your coding journey:</p>
+
+            <!-- Accordion structure for lessons -->
+            <div id="accordion">
+                <h3>Lesson 1: Variables and Data Types</h3>
+                <div>
+                    <p>In this lesson, you will learn about variables, constants, and data types in JavaScript.</p>
+                </div>
+                <h3>Lesson 2: Functions and Control Flow</h3>
+                <div>
+                    <p>This lesson covers functions, conditionals, and loops in JavaScript.</p>
+                </div>
+                <h3>Lesson 3: Arrays and Loops</h3>
+                <div>
+                    <p>Learn how to work with arrays and iterate over them using loops.</p>
+                </div>
+                <h3>Lesson 4: Objects and DOM Manipulation</h3>
+                <div>
+                    <p>This lesson introduces you to objects and how to manipulate the DOM using JavaScript.</p>
+                </div>
+            </div>
+
+            <!-- Difficulty Slider -->
+            <h3>Set Difficulty Level:</h3>
+            <p>Difficulty: <span id="sliderValue">5</span></p>
+            <div id="difficultySlider"></div>
+
+        </section>
+    </main>
+
+    <!-- Footer section with meaningful content -->
+    <footer>
+        <p>&copy; 2024 CodeQuest. All Rights Reserved.</p>
+        <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url">Validate HTML</a><br>
+    </footer>
+
+    <script>
+        // Initialize the Accordion widget
+        // Harvey Jones Contribution (jQuery Widget)
+        $(function() {
+            $("#accordion").accordion({
+                collapsible: true, // Allows sections to be collapsed
+                active: false,     // Keeps all sections collapsed by default
+                heightStyle: "content" // Ensures that each section expands to fit its content
+            });
+
+            // Initialize the Difficulty Slider
+            // Edward Mobley Contribution (jQuery Plugin)
+            $("#difficultySlider").slider({
+                min: 1,
+                max: 10,
+                value: 5, // Default value
+                slide: function(event, ui) {
+                    $("#sliderValue").text(ui.value); // Update the displayed difficulty value
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

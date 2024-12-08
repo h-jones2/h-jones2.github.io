@@ -1,0 +1,111 @@
+/* Body styling */
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+   /* Light grey background for the body */
+    background-color: #f4f4f4; 
+   /* Dark text for readability */
+    color: #333; 
+}
+
+/* Header styling */
+header {
+    /* Dark blue background for header */
+    background-color: #2c3e50; 
+   /* Light text color */
+    color: #ecf0f1; 
+    padding: 20px 0;
+    text-align: center;
+    /* Blue border at the bottom of the header */
+    border-bottom: 4px solid #2980b9; 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* Navigation bar styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    /* Blue hover effect */
+    background-color: #2980b9; 
+}
+
+/* Highlight the current page link */
+nav ul li a.active {
+    /* Current page indication */
+    background-color: #2980b9; 
+}
+
+/* Main content styling */
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 20px auto;
+   /* White background for the main content */
+    background-color: #fff; 
+    border-radius: 10px;
+    /* Subtle shadow effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+main h2 {
+    font-size: 2rem;
+    /* Darker color for headings */
+    color: #2c3e50; 
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+main img {
+    /* Make sure the image is responsive */
+    max-width: 100%; 
+    height: auto;
+    /* Slight rounding on the image corners */
+    border-radius: 10px; 
+}
+
+/* Footer styling */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px 0;
+    /* Blue top border */
+    border-top: 4px solid #2980b9; 
+}
+
+footer a {
+    color: #ecf0f1;
+}
